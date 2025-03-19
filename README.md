@@ -1,16 +1,36 @@
-# PlaywrightAutomation
-Overview
+# Playwright Product Catalog Scraper
 
+## Overview
 This Playwright script automates data extraction from a product catalog. It efficiently manages sessions, navigates hidden menus, extracts product data, and exports the data to a structured JSON file for analysis.
 
-Features
+## Features
+- **Session Management:** Logs in if necessary and maintains an active session.
+- **Automated Navigation:** Clicks through UI elements to reach the product catalog.
+- **Data Extraction:** Scrapes product details from a dynamically loaded table.
+- **Scroll Handling:** Automatically scrolls until all products are loaded.
+- **Export to JSON:** Saves extracted data in a structured JSON format.
 
-Session Management: Checks for an existing session and reuses it. If unavailable, authenticates and saves the session.
+## Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/uday1203/PlaywrightAutomation.git
+   cd PlaywrightAutomation
+   ```
+2. Install dependencies:
+   ```sh
+   pip install playwright tqdm
+   playwright install
+   ```
 
-Automated Navigation: Handles multi-level flyout menus to reach the product catalog.
+## Usage
+1. Run the script:
+   ```sh
+   python script.py
+   ```
+2. Extracted data will be saved as `Data.json`.
 
-Data Extraction: Captures all product data from the table, including pagination and dynamically loaded content.
+## Configuration
+- Update authentication credentials in the `credentials` dictionary inside `script.py`.
+- Modify navigation selectors in `script.py` if needed.
 
-Export to JSON: Saves extracted data in a structured JSON format.
 
-Automated Submission: Submits the script via the "Submit Script" page on GitHub.
